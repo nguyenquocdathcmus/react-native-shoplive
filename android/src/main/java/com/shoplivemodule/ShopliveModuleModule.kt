@@ -99,6 +99,14 @@ class ShopliveModuleModule(reactContext: ReactApplicationContext) :
         })
     }
 
+    @ReactMethod fun playWithAuthToken(ck:String, jwtToken:String) {
+        ShopLive.setAuthToken(jwtToken)
+        ShopLive.play(reactApplicationContext , ShopLivePlayerData(ck).apply {
+            keepWindowStateOnPlayExecuted = false
+            referrer = "referrer"
+        })
+    }
+
     @ReactMethod
     fun setShareUrl(schemeUrl: String?) {
         ShopLive.setShareScheme(schemeUrl)
