@@ -39,7 +39,7 @@ class ShopliveModule: RCTEventEmitter {
     }
   }
 
-  @objc(playWithAuthToken:campaign:)
+  @objc(playWithAuthToken:jwtToken:)
   func playWithAuthToken(campaign: String, jwtToken: String) {
      DispatchQueue.main.async {
        ShopLive.authToken = jwtToken
