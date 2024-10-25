@@ -39,13 +39,12 @@ class ShopliveModule: RCTEventEmitter {
     }
   }
 
-  @objc(playWithAuthToken:jwtToken:)
-  func playWithAuthToken(_campaign: String, jwtToken: String) {
+ @objc func playWithAuthToken(_ campaign: String, jwtToken: String) {
      DispatchQueue.main.async {
-       ShopLive.authToken = jwtToken
-       ShopLive.play(data: .init(campaignKey:campaign))
+       ShopLive.authToken = jwtToken as String
+       ShopLive.play(data: .init(campaignKey: campaign as String))
     }
-  }
+}
 
   @objc(setUser:userName:)
   func setUser(_ userId: String, userName: String) {

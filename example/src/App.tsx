@@ -87,7 +87,7 @@ function HomeScreen({navigation}: HomeProps) {
   );
 }
 
-function WebviewScreen({route, navigation}: WebviewProps) {
+function WebviewScreen({route}: WebviewProps) {
   const {ak} = route.params;
   return (
     <SafeAreaView style={styles.container}>
