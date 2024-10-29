@@ -67,5 +67,12 @@ class ShopliveJSModule {
   setShareUrl(url: string) {
     ShopliveModule.setShareUrl(url);
   }
+
+  startPictureInPicture() {
+    ShopliveModule.startPictureInPicture();
+  }
+  stopPictureInPicture() {
+    ShopliveModule.stopPictureInPicture();
+  }
 }
 export default ShopliveJSModule;
