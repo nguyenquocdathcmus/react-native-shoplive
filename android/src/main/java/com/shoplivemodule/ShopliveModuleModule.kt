@@ -99,6 +99,14 @@ class ShopliveModuleModule(reactContext: ReactApplicationContext) :
         })
     }
 
+    @ReactMethod fun startPictureInPicture() {
+        ShopLive.startPictureInPicture()
+    }
+
+     @ReactMethod fun stopPictureInPicture() {
+        ShopLive.stopPictureInPicture()
+    }
+
     @ReactMethod fun playWithAuthToken(ck:String, jwtToken:String) {
         ShopLive.setAuthToken(jwtToken)
         ShopLive.play(reactApplicationContext , ShopLivePlayerData(ck).apply {

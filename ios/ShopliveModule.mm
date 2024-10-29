@@ -17,6 +17,10 @@ RCT_EXTERN_METHOD(setUser:(NSString *)userId userName:(NSString *)userName)
 RCT_EXTERN_METHOD(setShareUrl:(NSString *)schemeUrl)
 RCT_EXTERN_METHOD(close)
 RCT_EXTERN_METHOD(supportedEvents)
+RCT_EXTERN_METHOD(startPictureInPicture)
+RCT_EXTERN_METHOD(stopPictureInPicture)
+
+
 
 
 @end

@@ -39,6 +39,20 @@ class ShopliveModule: RCTEventEmitter {
     }
   }
 
+  @objc(startPictureInPicture)
+  func startPictureInPicture() {
+    DispatchQueue.main.async {
+      ShopLive.startPictureInPicture()
+    }
+  }
+
+   @objc(stopPictureInPicture)
+  func stopPictureInPicture() {
+    DispatchQueue.main.async {
+      ShopLive.stopPictureInPicture()
+    }
+  }
+
  @objc func playWithAuthToken(_ campaign: String, jwtToken: String) {
      DispatchQueue.main.async {
        ShopLive.authToken = jwtToken as String
